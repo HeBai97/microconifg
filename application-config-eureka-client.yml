@@ -1,41 +1,47 @@
+server:
+  port: 7001
+eureka:
+  server:
+  #    eviction-interval-timer-in-ms: 1000  #设置清理间隔  单位毫秒   默认 60*1000
+  #    enable-self-preservation: true
+  client:
+    service-url:
+      defaultZone: http://edmin:myjava@eureka-7001.com:7001/eureka #注册中心地址
+    register-with-eureka: false  #表示该服务不注册到eureka中
+    fetch-registry: false #不通过eureka获得注册信息
+  instance:
+    hostname: eureka-7001.com #eureka实例所在的主机名称
 spring:
   profiles: dev
   application:
     name: microcloud-config-eureka-client
-server:
-  port: 7001
 security:
   basic:
-    enabled: true
+    enabled: true #启用安全认证管理
   user:
     name: edmindev
     password: myjava
+---
+server:
+  port: 7002
 eureka:
+  server:
+  #    eviction-interval-timer-in-ms: 1000  #设置清理间隔  单位毫秒   默认 60*1000
+  #    enable-self-preservation: true
   client:
     service-url:
-      dafaultZone: http://edmindev:myjava@eureka-7001.com:7001/eureka #注册中心地址
-    register-with-eureka: false
-    fetch-registry: false
+      defaultZone: http://edmin:myjava@eureka-7002.com:7002/eureka #注册中心地址
+    register-with-eureka: false  #表示该服务不注册到eureka中
+    fetch-registry: false #不通过eureka获得注册信息
   instance:
-    hostname: eureka-7001.com
----
+    hostname: eureka-7002.com #eureka实例所在的主机名称
 spring:
   profiles: beta
   application:
     name: microcloud-config-eureka-client
-server:
-  port: 7002
 security:
   basic:
-    enabled: true
+    enabled: true #启用安全认证管理
   user:
-    name: edminbeta
+    name: edmindev
     password: myjava
-eureka:
-  client:
-    service-url:
-      dafaultZone: http://edminbeta:myjava@eureka-7002.com:7002/eureka #注册中心地址
-    register-with-eureka: false
-    fetch-registry: false
-  instance:
-    hostname: eureka-7002.com
