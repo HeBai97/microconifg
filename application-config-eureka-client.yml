@@ -17,7 +17,7 @@ security:
 eureka:
   client:
     service-url:
-      dafaultZone: http://edmin:myjava@eureka-7001.com:7001/eureka #注册中心地址
+      dafaultZone: http://edmindev:myjava@eureka-7001.com:7001/eureka #注册中心地址
     register-with-eureka: false
     fetch-registry: false
   instance:
@@ -38,7 +38,95 @@ security:
 eureka:
   client:
     service-url:
-      dafaultZone: http://edmin:myjava@eureka-7002.com:7002/eureka #注册中心地址
+      dafaultZone: http://edminbeta:myjava@eureka-7002.com:7002/eureka #注册中心地址
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka-7002.comspring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: microcloud-config-eureka-client
+server:
+  port: 7001
+security:
+  basic:
+    enabled: true
+  user:
+    name: edmindev
+    password: myjava
+eureka:
+  client:
+    service-url:
+      dafaultZone: http://edmindev:myjava@eureka-7001.com:7001/eureka #注册中心地址
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka-7001.com
+---
+spring:
+  profiles: beta
+  application:
+    name: microcloud-config-eureka-client
+server:
+  port: 7002
+security:
+  basic:
+    enabled: true
+  user:
+    name: edminbeta
+    password: myjava
+eureka:
+  client:
+    service-url:
+      dafaultZone: http://edminbeta:myjava@eureka-7002.com:7002/eureka #注册中心地址
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka-7002.comspring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: microcloud-config-eureka-client
+server:
+  port: 7001
+security:
+  basic:
+    enabled: true
+  user:
+    name: edmindev
+    password: myjava
+eureka:
+  client:
+    service-url:
+      dafaultZone: http://edmindev:myjava@eureka-7001.com:7001/eureka #注册中心地址
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka-7001.com
+---
+spring:
+  profiles: beta
+  application:
+    name: microcloud-config-eureka-client
+server:
+  port: 7002
+security:
+  basic:
+    enabled: true
+  user:
+    name: edminbeta
+    password: myjava
+eureka:
+  client:
+    service-url:
+      dafaultZone: http://edminbeta:myjava@eureka-7002.com:7002/eureka #注册中心地址
     register-with-eureka: false
     fetch-registry: false
   instance:

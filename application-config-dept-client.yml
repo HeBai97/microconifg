@@ -1,6 +1,9 @@
+spring:
+  profiles:
+    active: dev
+---
 server:
   port: 8001
----
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源操作类型
@@ -15,7 +18,7 @@ spring:
       max-wait-millis: 200  #等待连接获取的最大等待时间
   profiles: dev
   application:
-    name: microcloud-config-eureka-client
+    name: microcloud-config-dept-client
 mybatis:
   config-location: classpath:mybatis.cfg.xml  #mybatis配置文件所在地
   type-aliases-package: com.cplatform.vo #mybatis操作类的别名所在包
@@ -23,7 +26,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://edmindev:myjava@eureka-dev.com:8001/eureka
+      defaultZone: http://edmindev:myjava@eureka-7001.com:7001/eureka
     register-with-eureka: false
     fetch-registry: false
   instance:
@@ -32,6 +35,8 @@ eureka:
     lease-renewal-interval-in-seconds: 2
     instance-id: dept-8001.com
 ---
+server:
+  port: 8001
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源操作类型
@@ -46,7 +51,7 @@ spring:
       max-wait-millis: 200  #等待连接获取的最大等待时间
   profiles: beta
   application:
-    name: microcloud-config-eureka-client
+    name: microcloud-config-dept-client
 mybatis:
   config-location: classpath:mybatis.cfg.xml  #mybatis配置文件所在地
   type-aliases-package: com.cplatform.vo #mybatis操作类的别名所在包
@@ -54,11 +59,11 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://edminbeta:myjava@eureka-beta.com:8002/eureka
+      defaultZone: http://edminbeta:myjava@eureka-7001.com:7001/eureka
     register-with-eureka: false
     fetch-registry: false
   instance:
     prefer-ip-address: true
     lease-expiration-duration-in-seconds: 5
     lease-renewal-interval-in-seconds: 2
-    instance-id: dept-8001.com
+    instance-id: dept-8002.com
