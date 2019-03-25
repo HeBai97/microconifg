@@ -59,6 +59,6 @@ eureka:
     fetch-registry: false
   instance:
     prefer-ip-address: true
-      lease-expiration-duration-in-seconds: 5
-      lease-renewal-interval-in-seconds: 2
-      instance-id: dept-8001.com
+    lease-expiration-duration-in-seconds: 5
+    lease-renewal-interval-in-seconds: 2
+    instance-id: dept-8001.com
