@@ -23,7 +23,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://edmin:myjava@eureka-dev.com:8001/eureka
+      defaultZone: http://edmindev:myjava@eureka-dev.com:8001/eureka
     register-with-eureka: false
     fetch-registry: false
   instance:
@@ -54,7 +54,7 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://edmin:myjava@eureka-beta.com:8002/eureka
+      defaultZone: http://edminbeta:myjava@eureka-beta.com:8002/eureka
     register-with-eureka: false
     fetch-registry: false
   instance:
