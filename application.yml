@@ -2,25 +2,13 @@ spring:
   profiles:
     active: dev
 ---
-server:
-  port: 7001
 spring:
-  application:
-    name: microcloud-test-dev
   profiles: dev
+  application:
+    name: microconfig-test-dev
 
 ---
-server:
-  port: 7002
 spring:
-  application:
-    name: microcloud-test-default
   profiles: default
-
----
-server:
-  port: 7003
-spring:
   application:
-    name: microcloud-test-beta
-  profiles: beta
+    name: microconfig-test-default
