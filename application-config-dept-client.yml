@@ -59,11 +59,11 @@ mybatis:
 eureka:
   client:
     service-url:
-      defaultZone: http://edminbeta:myjava@eureka-7001.com:7001/eureka
+      defaultZone: http://edminbeta:myjava@eureka-7002.com:7002/eureka
     register-with-eureka: false
     fetch-registry: false
   instance:
     prefer-ip-address: true
     lease-expiration-duration-in-seconds: 5
     lease-renewal-interval-in-seconds: 2
-    instance-id: dept-8002.com
+    instance-id: dept-8001.com
