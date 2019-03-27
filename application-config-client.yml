@@ -8,10 +8,10 @@ spring:
   application:
     name: microcloud-config-client
   profiles: dev
-eureka:
-  client:
-    service-url:
-      defaultZone: http://edmin:myjava@eureka-dev.com:7001/eureka
+info:
+  app.name: microcloud-config-dev
+  company.name: cplatform
+  app.version: v-dev-1.0
 ---
 server:
   port: 8202
@@ -19,10 +19,10 @@ spring:
   application:
     name: microcloud-config-client
   profiles: default
-eureka:
-  client:
-    service-url:
-      defaultZone: http://edmin:myjava@eureka-default.com:7002/eureka
+info:
+  app.name: microcloud-config-default
+  company.name: cplatform
+  app.version: v-default-1.0
 ---
 server:
   port: 8203
@@ -30,7 +30,8 @@ spring:
   application:
     name: microcloud-config-client
   profiles: beta
-eureka:
-  client:
-    service-url:
-      defaultZone: http://edmin:myjava@eureka-beta.com:7003/eureka
+info:
+  app.name: microcloud-config-beta
+  company.name: cplatform
+
+  app.version: v-beta-1.0

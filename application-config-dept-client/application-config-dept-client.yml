@@ -9,7 +9,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource #数据源操作类型
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: '{cipher}86c8a45c7c477074082c2e9e93247039eed6a2959b25121fddf4315f9e94e245'
+    password: '{cipher}AQBH/LCfxlLskuABaottFUHRdp8CnhmmUgNU7HBx9bth1wU99YD2W3yW4XjFfi8U75WsHVQc6BE5HSjst0WadkLqR0BpzdSPzaJbgJb0aTP+pC/faPwapD/MnKpOc7pK1lzlhnGb958hD0lqx/p4SriIvILESRd0yx9utTuANGRtztMzyqdx1fUvsH7xmso6xDcSnACshWMeY7JcHfNytx5ydUGs5smEkNYiQUVxUz+YSIz5IVCuS8Xp8ne45lgQD3/+h86CdWvPoiRkWGOrCQI4IBmEizPA5LGFK33wC2nfsEbRPqj28Q1W0EHnWJPLC39crCY7l7d4zNpt4tOwkOcWJyHT1kZSQ5uM9Bt3/Yb6T+9lkUH3CmdL0wYWwMG3AoU='
     url: jdbc:mysql:///test8003
     dbcp2:
       min-idle: 5 #数据库连接池的最小维持连接数
