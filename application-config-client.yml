@@ -8,13 +8,10 @@ spring:
   application:
     name: microcloud-config-client
   profiles: dev
-<<<<<<< HEAD
 info:
   app.name: microcloud-config-dev
   company.name: cplatform
   app.version: v-dev-1.0
-=======
->>>>>>> 21a6343b0f8465e57eab4cad0eb75cd577e0d2da
 ---
 server:
   port: 8202
@@ -22,13 +19,10 @@ spring:
   application:
     name: microcloud-config-client
   profiles: default
-<<<<<<< HEAD
 info:
   app.name: microcloud-config-default
   company.name: cplatform
   app.version: v-default-1.0
-=======
->>>>>>> 21a6343b0f8465e57eab4cad0eb75cd577e0d2da
 ---
 server:
   port: 8203
@@ -36,11 +30,7 @@ spring:
   application:
     name: microcloud-config-client
   profiles: beta
-<<<<<<< HEAD
 info:
   app.name: microcloud-config-beta
   company.name: cplatform
-
   app.version: v-beta-1.0
-=======
->>>>>>> 21a6343b0f8465e57eab4cad0eb75cd577e0d2da
