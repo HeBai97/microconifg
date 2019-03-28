@@ -27,7 +27,7 @@ spring:
     name: microcloud-config-client
   profiles: beta
 info:
-  app.name: microcloud-config-beta5+
-  company.name: cplatform4
-  app.version: v-beta-3.0
+  app.name: microcloud-config-beta6+
+  company.name: cplatform10
+  app.version: v-beta-7.0
 
